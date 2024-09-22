@@ -6,3 +6,7 @@ dist
 examples/fake.*
 trio_websocket.egg-info
 venv
+# pixi environments
+.pixi
+*.egg-info
+pixi.lock
