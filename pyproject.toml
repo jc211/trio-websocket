@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "trio-websocket"
+version = "0.12.0-dev" 
+description = "WebSocket library for Trio"
+readme = "README.md"
+readme-content-type = "text/markdown"
+requires-python = ">=3.8"
+keywords = ["websocket", "client", "server", "trio"]
+license = {text = "MIT License"}
+authors = [
+    {name = "Mark E. Haase", email = "mehaase@gmail.com"}
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy"
+]
+
+[project.urls]
+"Bug Reports" = "https://github.com/python-trio/trio-websocket/issues"
+"Source" = "https://github.com/python-trio/trio-websocket"
+
+[project.dependencies]
+"exceptiongroup" = {version = "<3.11", python = "<3.11"}
+"trio" = ">=0.11"
+"wsproto" = {git = "https://github.com/python-hyper/wsproto.git", rev = "b48fa3c5ddf4150ce31fe9153f66cf8aaebe708a"}
+
+[tool.setuptools.packages.find]
+exclude = ["docs", "examples", "tests"]
